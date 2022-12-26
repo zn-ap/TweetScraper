@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "4",
+    "Image": {
+      "Name": "438766000088.dkr.ecr.us-east-1.amazonaws.com/senseiscraper"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 3000
+      }
+    ]
+  }
