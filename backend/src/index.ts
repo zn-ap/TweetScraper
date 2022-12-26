@@ -31,9 +31,7 @@ createDB();
         console.dir(response, {
             depth: null
         });
-
-        const tweetData = JSON.parse(response);
-        tweetData.forEach((tweet: any) => {
+        response["data"].forEach((tweet: any) => {
             const params = {
                 TableName: "TWEET_TABLE",
                 Item: {
@@ -45,6 +43,7 @@ createDB();
                 }
             };
             // Push to Dynamo
+            console.log("yo" + tweet);
             putDB(params);
         });
     }
